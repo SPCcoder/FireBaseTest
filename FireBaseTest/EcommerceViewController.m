@@ -1,33 +1,23 @@
 //
-//  FBViewController.m
+//  EcommerceViewController.m
 //  FireBaseTest
 //
 //  Created by Apple on 10/12/2017.
 //  Copyright © 2017 com.spcarlin. All rights reserved.
 //
 
-#import "FBViewController.h"
+#import "EcommerceViewController.h"
 @import Firebase;
-@interface FBViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
-@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
+@interface EcommerceViewController ()
 
 @end
 
-@implementation FBViewController
+@implementation EcommerceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-- (IBAction)buttonOneTouched:(id)sender {
-    NSLog(@"button one tapped");
-    [FIRAnalytics logEventWithName:@"button1Click" parameters:nil];
-}
-- (IBAction)buttonTwoTouched:(id)sender {
-    NSLog(@"button two tapped");
-    [FIRAnalytics logEventWithName:@"button2Click" parameters:nil];
-
+    [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"EcommerceViewed"}];
 }
 
 - (void)didReceiveMemoryWarning {

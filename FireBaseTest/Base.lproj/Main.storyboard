@@ -72,24 +72,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-NL-Tl0">
-                                <rect key="frame" x="172" y="69" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="one"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GE-se-Wak">
-                                <rect key="frame" x="164" y="121" width="30" height="30"/>
+                                <rect key="frame" x="90" y="149" width="195" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72454983866068834" green="1" blue="0.72243866233680865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="two"/>
+                                <connections>
+                                    <action selector="buttonTwoTouched:" destination="xNB-e3-IIC" eventType="touchUpInside" id="795-Su-ivi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-NL-Tl0">
+                                <rect key="frame" x="90" y="93" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.81638254279579936" blue="0.77505035510004838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="one"/>
+                                <connections>
+                                    <action selector="buttonOneTouched:" destination="xNB-e3-IIC" eventType="touchUpInside" id="8ak-nL-9vZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q9P-QP-6vJ"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonOne" destination="IpC-NL-Tl0" id="F2o-eO-RYs"/>
+                        <outlet property="buttonTwo" destination="4GE-se-Wak" id="6Eu-Jx-IhS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3k-sJ-eE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="159"/>
+            <point key="canvasLocation" x="1336.8" y="158.77061469265368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jgr-3q-yx4">
