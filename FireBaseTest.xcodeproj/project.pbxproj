@@ -10,6 +10,7 @@
 		183B60081FDDCBEE000C050A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B60071FDDCBEE000C050A /* GoogleService-Info.plist */; };
 		183B600B1FDDD0BC000C050A /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B600A1FDDD0BB000C050A /* FBViewController.m */; };
 		189A04E11FDDF11000C760AE /* EcommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A04E01FDDF11000C760AE /* EcommerceViewController.m */; };
+		189A04E31FDDF80B00C760AE /* FBSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189A04E21FDDF80B00C760AE /* FBSettings.plist */; };
 		189CD3651FDDC80100605DBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3641FDDC80100605DBB /* AppDelegate.m */; };
 		189CD3681FDDC80100605DBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3671FDDC80100605DBB /* ViewController.m */; };
 		189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CD3691FDDC80200605DBB /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		183B600A1FDDD0BB000C050A /* FBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
 		189A04DF1FDDF11000C760AE /* EcommerceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcommerceViewController.h; sourceTree = "<group>"; };
 		189A04E01FDDF11000C760AE /* EcommerceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcommerceViewController.m; sourceTree = "<group>"; };
+		189A04E21FDDF80B00C760AE /* FBSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FBSettings.plist; sourceTree = "<group>"; };
 		189CD3601FDDC80100605DBB /* FireBaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189CD3631FDDC80100605DBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189CD3641FDDC80100605DBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				189CD3721FDDC80200605DBB /* main.m */,
 				183B60091FDDD0BB000C050A /* FBViewController.h */,
 				183B600A1FDDD0BB000C050A /* FBViewController.m */,
+				189A04E21FDDF80B00C760AE /* FBSettings.plist */,
 			);
 			path = FireBaseTest;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189CD3701FDDC80200605DBB /* LaunchScreen.storyboard in Resources */,
+				189A04E31FDDF80B00C760AE /* FBSettings.plist in Resources */,
 				183B60081FDDCBEE000C050A /* GoogleService-Info.plist in Resources */,
 				189CD36D1FDDC80200605DBB /* Assets.xcassets in Resources */,
 				189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */,

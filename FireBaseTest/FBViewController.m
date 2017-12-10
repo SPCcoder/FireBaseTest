@@ -11,7 +11,8 @@
 @interface FBViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buttonOne;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
-
+@property (weak, nonatomic) IBOutlet UIButton *promoButton;
+@property (nonatomic) FIRRemoteConfig * rConfig;
 @end
 
 @implementation FBViewController
@@ -20,7 +21,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"FBViewControllerViewed"}];
+    _rConfig = [FIRRemoteConfig remoteConfig];
 
+    FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];
+    
+    [_rConfig setConfigSettings:remoteConfigSettings];
+}
+- (IBAction)promoTouched:(id)sender {
 }
 - (IBAction)buttonOneTouched:(id)sender {
     NSLog(@"button one tapped");

@@ -106,6 +106,14 @@
                                     <action selector="buyTouched:" destination="xNB-e3-IIC" eventType="touchUpInside" id="Ebg-ec-nYz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-we-Ta2">
+                                <rect key="frame" x="90" y="278" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Promo"/>
+                                <connections>
+                                    <action selector="promoTouched:" destination="xNB-e3-IIC" eventType="touchUpInside" id="Jsb-Dr-x5X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q9P-QP-6vJ"/>
@@ -114,6 +122,7 @@
                     <connections>
                         <outlet property="buttonOne" destination="IpC-NL-Tl0" id="F2o-eO-RYs"/>
                         <outlet property="buttonTwo" destination="4GE-se-Wak" id="6Eu-Jx-IhS"/>
+                        <outlet property="promoButton" destination="GW1-we-Ta2" id="HuR-bq-bg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3k-sJ-eE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
