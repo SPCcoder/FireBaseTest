@@ -46,7 +46,8 @@
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         FBViewController *FBVC =  [storyBoard instantiateViewControllerWithIdentifier:@"FBVC"]; //[[FBViewController alloc]init];
-        [self presentViewController:FBVC animated:YES completion:nil];
+      //  [self presentViewController:FBVC animated:YES completion:nil];
+        [[self navigationController] pushViewController:FBVC animated:YES]; //presentViewController:FBVC animated:YES completion:nil];
     }
 }
 @end

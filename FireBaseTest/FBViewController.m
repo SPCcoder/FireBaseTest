@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"FBViewControllerViewed"}];
+
 }
 - (IBAction)buttonOneTouched:(id)sender {
     NSLog(@"button one tapped");
@@ -28,6 +30,9 @@
     NSLog(@"button two tapped");
     [FIRAnalytics logEventWithName:@"button2Click" parameters:nil];
 
+}
+- (IBAction)buyTouched:(id)sender {
+    [FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{kFIRParameterItemID : @"EcommerceBuyTapped"}];
 }
 
 - (void)didReceiveMemoryWarning {

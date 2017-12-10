@@ -18,12 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"EcommerceViewed"}];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//line for ibaction buy button
+//     [FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{kFIRParameterItemID : @"EcommerceBuyTapped"}];
 
 /*
 #pragma mark - Navigation
