@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonOne;
 @property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
 @property (weak, nonatomic) IBOutlet UIButton *promoButton;
-@property (nonatomic) FIRRemoteConfig * rConfig;
+@property (nonatomic) FIRRemoteConfig * remoteConfig;
 @end
 
 @implementation FBViewController
@@ -21,11 +21,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"FBViewControllerViewed"}];
-    _rConfig = [FIRRemoteConfig remoteConfig];
+    self.remoteConfig = [FIRRemoteConfig remoteConfig];
 
     FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];
     
-    [_rConfig setConfigSettings:remoteConfigSettings];
+    [self.remoteConfig setConfigSettings:remoteConfigSettings];
+    
+    //load defaults from plist
+    [self.remoteConfig setDefaultsFromPlistFileName:@"FBSettings"];
+    
+    [self checkPromoEnabled];
+}
+- (void)checkPromoEnabled {
+    double cacheExpireTime = 3600;
+    if (self.remoteConfig.configSettings.isDeveloperModeEnabled){// indebug we always want live server
+        cacheExpireTime = 0;
+    }
+    
+    //fetch defaults from server
+    [self.remoteConfig fetchWithExpirationDuration: cacheExpireTime completionHandler:^(FIRRemoteConfigFetchStatus status, NSError * _Nullable error) {
+        if (status == FIRRemoteConfigFetchStatusSuccess){
+            //fetch worked
+            [self.remoteConfig activateFetched];
+        } else {
+            // error
+        }
+        [self showPromoButton];
+    }];
+}
+-(void)showPromoButton {
+    NSString *promoButtonString = [self.remoteConfig configValueForKey:@"promo_message"].stringValue;
+    BOOL showButtonBool = [self.remoteConfig configValueForKey:@"promo_enabled"].boolValue;
+    NSLog(@" show button:%s, with string: %@", showButtonBool ? "true" : "false", promoButtonString);
+    self.promoButton.hidden = !showButtonBool;
+    [self.promoButton setTitle:promoButtonString forState: normal];
+
 }
 - (IBAction)promoTouched:(id)sender {
 }
