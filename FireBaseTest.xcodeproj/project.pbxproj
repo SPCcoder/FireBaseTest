@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183B60081FDDCBEE000C050A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B60071FDDCBEE000C050A /* GoogleService-Info.plist */; };
+		183B600B1FDDD0BC000C050A /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B600A1FDDD0BB000C050A /* FBViewController.m */; };
 		189CD3651FDDC80100605DBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3641FDDC80100605DBB /* AppDelegate.m */; };
 		189CD3681FDDC80100605DBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3671FDDC80100605DBB /* ViewController.m */; };
 		189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CD3691FDDC80200605DBB /* Main.storyboard */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183B60071FDDCBEE000C050A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		183B60091FDDD0BB000C050A /* FBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBViewController.h; sourceTree = "<group>"; };
+		183B600A1FDDD0BB000C050A /* FBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
 		189CD3601FDDC80100605DBB /* FireBaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189CD3631FDDC80100605DBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189CD3641FDDC80100605DBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +70,7 @@
 		189CD3621FDDC80100605DBB /* FireBaseTest */ = {
 			isa = PBXGroup;
 			children = (
+				183B60071FDDCBEE000C050A /* GoogleService-Info.plist */,
 				189CD3631FDDC80100605DBB /* AppDelegate.h */,
 				189CD3641FDDC80100605DBB /* AppDelegate.m */,
 				189CD3661FDDC80100605DBB /* ViewController.h */,
@@ -74,6 +80,8 @@
 				189CD36E1FDDC80200605DBB /* LaunchScreen.storyboard */,
 				189CD3711FDDC80200605DBB /* Info.plist */,
 				189CD3721FDDC80200605DBB /* main.m */,
+				183B60091FDDD0BB000C050A /* FBViewController.h */,
+				183B600A1FDDD0BB000C050A /* FBViewController.m */,
 			);
 			path = FireBaseTest;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189CD3701FDDC80200605DBB /* LaunchScreen.storyboard in Resources */,
+				183B60081FDDCBEE000C050A /* GoogleService-Info.plist in Resources */,
 				189CD36D1FDDC80200605DBB /* Assets.xcassets in Resources */,
 				189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */,
 			);
@@ -229,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183B600B1FDDD0BC000C050A /* FBViewController.m in Sources */,
 				189CD3681FDDC80100605DBB /* ViewController.m in Sources */,
 				189CD3731FDDC80200605DBB /* main.m in Sources */,
 				189CD3651FDDC80100605DBB /* AppDelegate.m in Sources */,

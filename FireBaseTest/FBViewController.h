@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FBViewController.h
 //  FireBaseTest
 //
 //  Created by Apple on 10/12/2017.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@interface FBViewController : UIViewController
 
 @end
-
