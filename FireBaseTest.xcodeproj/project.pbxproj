@@ -11,6 +11,8 @@
 		183B600B1FDDD0BC000C050A /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183B600A1FDDD0BB000C050A /* FBViewController.m */; };
 		189A04E11FDDF11000C760AE /* EcommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A04E01FDDF11000C760AE /* EcommerceViewController.m */; };
 		189A04E31FDDF80B00C760AE /* FBSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189A04E21FDDF80B00C760AE /* FBSettings.plist */; };
+		189A04E61FDE01EA00C760AE /* evil_google.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189A04E41FDE01E900C760AE /* evil_google.jpg */; };
+		189A04E71FDE01EA00C760AE /* blippar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189A04E51FDE01EA00C760AE /* blippar.jpg */; };
 		189CD3651FDDC80100605DBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3641FDDC80100605DBB /* AppDelegate.m */; };
 		189CD3681FDDC80100605DBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189CD3671FDDC80100605DBB /* ViewController.m */; };
 		189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CD3691FDDC80200605DBB /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		189A04DF1FDDF11000C760AE /* EcommerceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcommerceViewController.h; sourceTree = "<group>"; };
 		189A04E01FDDF11000C760AE /* EcommerceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcommerceViewController.m; sourceTree = "<group>"; };
 		189A04E21FDDF80B00C760AE /* FBSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FBSettings.plist; sourceTree = "<group>"; };
+		189A04E41FDE01E900C760AE /* evil_google.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = evil_google.jpg; path = ../../../../Downloads/evil_google.jpg; sourceTree = "<group>"; };
+		189A04E51FDE01EA00C760AE /* blippar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blippar.jpg; path = ../../../../Downloads/blippar.jpg; sourceTree = "<group>"; };
 		189CD3601FDDC80100605DBB /* FireBaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189CD3631FDDC80100605DBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		189CD3641FDDC80100605DBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,15 +84,17 @@
 				189CD3641FDDC80100605DBB /* AppDelegate.m */,
 				189CD3661FDDC80100605DBB /* ViewController.h */,
 				189CD3671FDDC80100605DBB /* ViewController.m */,
-				189CD3691FDDC80200605DBB /* Main.storyboard */,
+				183B60091FDDD0BB000C050A /* FBViewController.h */,
+				183B600A1FDDD0BB000C050A /* FBViewController.m */,
 				189A04DF1FDDF11000C760AE /* EcommerceViewController.h */,
 				189A04E01FDDF11000C760AE /* EcommerceViewController.m */,
+				189CD3691FDDC80200605DBB /* Main.storyboard */,
+				189A04E41FDE01E900C760AE /* evil_google.jpg */,
+				189A04E51FDE01EA00C760AE /* blippar.jpg */,
 				189CD36C1FDDC80200605DBB /* Assets.xcassets */,
 				189CD36E1FDDC80200605DBB /* LaunchScreen.storyboard */,
 				189CD3711FDDC80200605DBB /* Info.plist */,
 				189CD3721FDDC80200605DBB /* main.m */,
-				183B60091FDDD0BB000C050A /* FBViewController.h */,
-				183B600A1FDDD0BB000C050A /* FBViewController.m */,
 				189A04E21FDDF80B00C760AE /* FBSettings.plist */,
 			);
 			path = FireBaseTest;
@@ -177,6 +183,8 @@
 				183B60081FDDCBEE000C050A /* GoogleService-Info.plist in Resources */,
 				189CD36D1FDDC80200605DBB /* Assets.xcassets in Resources */,
 				189CD36B1FDDC80200605DBB /* Main.storyboard in Resources */,
+				189A04E61FDE01EA00C760AE /* evil_google.jpg in Resources */,
+				189A04E71FDE01EA00C760AE /* blippar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

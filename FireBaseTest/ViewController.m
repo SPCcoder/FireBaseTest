@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.cellNames = @[@"FireBase"];
+    self.cellNames = @[@"FireBase, Theme"];
 }
 
 
@@ -37,14 +37,16 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"you touched cell at index: %li", (long)indexPath.row);
-    if(indexPath.row == 0) {
+    if([cell.textLabel.text isEqual: @"FireBase"]) {
         //firebase
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         FBViewController *FBVC =  [storyBoard instantiateViewControllerWithIdentifier:@"FBVC"]; //[[FBViewController alloc]init];
-      //  [self presentViewController:FBVC animated:YES completion:nil];
         [[self navigationController] pushViewController:FBVC animated:YES]; //presentViewController:FBVC animated:YES completion:nil];
+    } else if ([cell.textLabel.text isEqual: @"Theme"]){
+        //here either just flip the theme or make new VC to show option for theme
     }
 }
 @end
