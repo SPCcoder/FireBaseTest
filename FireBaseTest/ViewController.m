@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.cellNames = @[@"FireBase, Theme"];
+    self.cellNames = @[@"FireBase", @"Theme"];
 }
 
 
@@ -34,6 +34,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = self.cellNames[indexPath.row];
+    NSLog(@"index:%li, cell name: %@", (long)indexPath.row, cell.textLabel.text);
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

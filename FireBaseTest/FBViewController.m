@@ -53,7 +53,11 @@
     NSString *promoButtonString = [self.remoteConfig configValueForKey:@"promo_message"].stringValue;
     BOOL showButtonBool = [self.remoteConfig configValueForKey:@"promo_enabled"].boolValue;
     NSLog(@" show button:%s, with string: %@", showButtonBool ? "true" : "false", promoButtonString);
+    self.promoButton.alpha = 0;
     self.promoButton.hidden = !showButtonBool;
+    [UIView animateWithDuration:2 animations:^{
+        self.promoButton.alpha = 1;
+    }];
     [self.promoButton setTitle:promoButtonString forState: normal];
 
 }

@@ -100,6 +100,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-we-Ta2">
                                 <rect key="frame" x="90" y="278" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91979339829999995" green="1" blue="0.26240601930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Promo"/>
                                 <connections>
                                     <action selector="promoTouched:" destination="xNB-e3-IIC" eventType="touchUpInside" id="Jsb-Dr-x5X"/>
