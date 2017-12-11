@@ -7,6 +7,15 @@
 //
 
 #import "FBViewController.h"
+//constants
+NSString * const kPromoClicked = @"promoClicked";
+NSString * const kButton1Click = @"button1Click";
+NSString * const kButton2Click = @"button2Click";
+NSString * const kEcommerceBuyTapped = @"EcommerceBuyTapped";
+NSString * const kPromo_message = @"promo_message";
+NSString * const kPromo_enabled = @"promo_enabled";
+NSString * const kFBSettings = @"FBSettings";
+
 @import Firebase;
 @interface FBViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buttonOne;
@@ -20,15 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"FBViewControllerViewed"}];
+    [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{kFIRParameterItemID : @"FBViewControllerViewed"}]; // logs screen view
     self.remoteConfig = [FIRRemoteConfig remoteConfig];
 
-    FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];
+    FIRRemoteConfigSettings *remoteConfigSettings = [[FIRRemoteConfigSettings alloc] initWithDeveloperModeEnabled:YES];// so we get live server instead of waiting while developing
     
     [self.remoteConfig setConfigSettings:remoteConfigSettings];
     
     //load defaults from plist
-    [self.remoteConfig setDefaultsFromPlistFileName:@"FBSettings"];
+    [self.remoteConfig setDefaultsFromPlistFileName:kFBSettings];
     
     [self checkPromoEnabled];
 }
@@ -45,35 +54,50 @@
             [self.remoteConfig activateFetched];
         } else {
             // error
+            NSLog(@"could not get data from server");
         }
         [self showPromoButton];
     }];
 }
 -(void)showPromoButton {
-    NSString *promoButtonString = [self.remoteConfig configValueForKey:@"promo_message"].stringValue;
-    BOOL showButtonBool = [self.remoteConfig configValueForKey:@"promo_enabled"].boolValue;
+    
+    NSString *promoButtonString = [self.remoteConfig configValueForKey:kPromo_message].stringValue;
+    
+    BOOL showButtonBool = [self.remoteConfig configValueForKey:kPromo_enabled].boolValue;
     NSLog(@" show button:%s, with string: %@", showButtonBool ? "true" : "false", promoButtonString);
-    self.promoButton.alpha = 0;
-    self.promoButton.hidden = !showButtonBool;
-    [UIView animateWithDuration:2 animations:^{
-        self.promoButton.alpha = 1;
-    }];
-    [self.promoButton setTitle:promoButtonString forState: normal];
+    
+    //Animated button showing to get user attention
+
+    if (showButtonBool == TRUE) {
+        self.promoButton.alpha = 0;
+        self.promoButton.hidden = FALSE;
+        [UIView animateWithDuration:2 animations:^{
+            self.promoButton.alpha = 1;
+        }];
+        
+        [self.promoButton setTitle:promoButtonString forState: normal];
+    } else {
+        // make sure button is not showing. this is default in storyboard, but we should c heck for future incase value changes
+        self.promoButton.hidden = TRUE;
+    }
+
 
 }
 - (IBAction)promoTouched:(id)sender {
+    [FIRAnalytics logEventWithName:kPromoClicked parameters:nil];
+
 }
 - (IBAction)buttonOneTouched:(id)sender {
     NSLog(@"button one tapped");
-    [FIRAnalytics logEventWithName:@"button1Click" parameters:nil];
+    [FIRAnalytics logEventWithName:kButton1Click parameters:nil];
 }
 - (IBAction)buttonTwoTouched:(id)sender {
     NSLog(@"button two tapped");
-    [FIRAnalytics logEventWithName:@"button2Click" parameters:nil];
+    [FIRAnalytics logEventWithName:kButton2Click parameters:nil];
 
 }
 - (IBAction)buyTouched:(id)sender {
-    [FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{kFIRParameterItemID : @"EcommerceBuyTapped"}];
+    [FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{kFIRParameterItemID : kEcommerceBuyTapped}];//special event type for logging
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,14 +105,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
