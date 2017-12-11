@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.cellNames = @[@"FireBase", @"Theme"];
+    self.cellNames = @[@"FireBase"/*, @"Theme"*/];
 }
 
 
@@ -46,8 +46,14 @@
         
         FBViewController *FBVC =  [storyBoard instantiateViewControllerWithIdentifier:@"FBVC"]; //[[FBViewController alloc]init];
         [[self navigationController] pushViewController:FBVC animated:YES]; //presentViewController:FBVC animated:YES completion:nil];
-    } else if ([cell.textLabel.text isEqual: @"Theme"]){
-        //here either just flip the theme or make new VC to show option for theme
+    } else {
+        NSLog(@"cell goes no where yet!");
     }
+        /* not implemented yet
+        if ([cell.textLabel.text isEqual: @"Theme"]){
+        //here either just flip the theme or make new VC to show option for theme
+         
+    }
+         */
 }
 @end
